@@ -1,6 +1,6 @@
 #
 # Conditional build:
-# _without_tests - do not perform "make test"
+%bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	Regexp
@@ -14,8 +14,10 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	ca98f58d1efcdcb98cc448f7ff061c6a
-%{!?_without_tests:BuildRequires:	perl-Regexp-Log >= 0.01}
-%{!?_without_tests:BuildRequires:	perl-Test-Simple}
+%if %{with tests}
+BuildRequires:	perl-Regexp-Log >= 0.01
+BuildRequires:	perl-Test-Simple
+%endif
 BuildRequires:	perl-devel >= 5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 BuildArch:	noarch
@@ -37,10 +39,9 @@ Appliance firmy BlueCoat Systems.
 %build
 %{__perl} Makefile.PL \
 	INSTALLDIRS=vendor
-
 %{__make}
 
-%{!?_without_tests:%{__make} test}
+%{?with_tests:%{__make} test}
 
 %install
 rm -rf $RPM_BUILD_ROOT
