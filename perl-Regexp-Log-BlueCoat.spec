@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 #
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Regexp
-%define	pnam	Log-BlueCoat
+%define		pdir	Regexp
+%define		pnam	Log-BlueCoat
 Summary:	Regexp::Log::BlueCoat - a regexp builder to parse BlueCoat log files
 Summary(pl):	Regexp::Log::BlueCoat - tworzenie wyra¿eñ regularnych do analizy logów BlueCoat
 Name:		perl-Regexp-Log-BlueCoat
