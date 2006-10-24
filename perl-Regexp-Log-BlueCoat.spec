@@ -8,13 +8,13 @@
 Summary:	Regexp::Log::BlueCoat - a regexp builder to parse BlueCoat log files
 Summary(pl):	Regexp::Log::BlueCoat - tworzenie wyra¿eñ regularnych do analizy logów BlueCoat
 Name:		perl-Regexp-Log-BlueCoat
-Version:	0.02
+Version:	0.03
 Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	ca98f58d1efcdcb98cc448f7ff061c6a
+# Source0-md5:	c8da7082238dc926c545a9cdd130fc9a
 %if %{with tests}
 BuildRequires:	perl-Regexp-Log >= 0.01
 BuildRequires:	perl-Test-Simple
