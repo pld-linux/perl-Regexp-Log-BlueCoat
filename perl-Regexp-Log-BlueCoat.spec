@@ -4,7 +4,6 @@
 
 %define		pdir	Regexp
 %define		pnam	Log-BlueCoat
-%include	/usr/lib/rpm/macros.perl
 Summary:	Regexp::Log::BlueCoat - a regexp builder to parse BlueCoat log files
 Summary(pl.UTF-8):	Regexp::Log::BlueCoat - tworzenie wyrażeń regularnych do analizy logów BlueCoat
 Name:		perl-Regexp-Log-BlueCoat
